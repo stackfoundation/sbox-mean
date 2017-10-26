@@ -1,0 +1,29 @@
+steps:
+  - image: 'mongo:jessie'
+    name: Launch Mongo
+    ports:
+      - name: mongo
+        containerPort: 27017
+        internalPort: 27017
+    type: service
+    readiness:
+      type: tcp
+      port: 27017
+  - image: 'node:8-alpine'
+    script: |-
+      apk update && apk add git
+      cd app
+      npm install
+      export PORT=31000
+      export HOST='0.0.0.0'
+      export MONGO_HOST='mongodb://mongo/new-mean'
+      export MONGO_PORT=27017
+      npm run start
+    ports:
+      - containerPort: 4040
+        internalPort: 31001
+        externalPort: 31001
+      - containerPort: 31000
+        internalPort: 31000
+        externalPort: 31000
+    name: Install and run application
