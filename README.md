@@ -1,3 +1,18 @@
+# [![Sandbox logo](https://stack.foundation/assets/images/logo.svg)](http://stack.foundation/) Sandbox project: MEAN<sup>2</sup>
+
+This project is an example of how Sandbox can be used to build and deploy code. Sandbox comes included in the git repo (it is a <200KB set of files) and works out-of-the-box, no manual setup or installing of dependencies.
+
+Currently one workflow exists, which runs a dev server, an can be run using:
+
+- `git clone https://github.com/stackfoundation/sbox-mean`
+- `cd sbox-mean`
+- `./sbox run dev-server`
+
+To understand the processes that make Sandbox work, please visit https://stack.foundation/#!/docs/overview
+
+Below is the original README for <strong>MEAN<sup>2</sup></strong>, for reference:
+<hr/>
+
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/linnovate/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 # [![MEAN Logo](http://mean.io/wp-content/themes/twentysixteen-child/images/meanlogo.png)](http://mean.io/) MEAN<sup>2</sup>
