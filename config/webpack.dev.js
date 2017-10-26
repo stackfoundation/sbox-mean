@@ -221,6 +221,7 @@ module.exports = function (options) {
       port: METADATA.port,
       host: METADATA.host,
       historyApiFallback: true,
+      disableHostCheck: true,
       watchOptions: {
         // if you're using Docker you may need this
         // aggregateTimeout: 300,
