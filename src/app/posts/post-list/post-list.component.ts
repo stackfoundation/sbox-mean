@@ -5,7 +5,7 @@ import { ApolloQueryResult } from 'apollo-client';
 import { Subject } from 'rxjs/Subject';
 import { DocumentNode } from 'graphql';
 import { PostsService } from '../posts.service';
-import { MdSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 
 
 import 'rxjs/add/operator/debounceTime';
