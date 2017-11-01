@@ -10,10 +10,17 @@ steps:
       type: tcp
       port: 27017
   - image: 'node:8-alpine'
+    cache: true
+    dockerignore: dockerignoreForNpmInstall
     script: |-
       apk update && apk add git
       cd app
       npm install
+    name: Install application
+  - image: Install application
+    imageSource: step
+    script: |-
+      cd app
       export PORT=31000
       export HOST='0.0.0.0'
       export MONGO_HOST='mongodb://mongo/new-mean'
@@ -26,4 +33,4 @@ steps:
       - containerPort: 31000
         internalPort: 31000
         externalPort: 31000
-    name: Install and run application
+    name: Run application
